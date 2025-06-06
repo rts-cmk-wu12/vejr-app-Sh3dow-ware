@@ -1,0 +1,128 @@
+@use "@/style/utils/variables" as Config
+
+.weather
+  padding: 2rem
+  font-family: Config.$FONT-GEIST
+  background-color: Config.$BACKGROUND_COLOR
+  color: Config.$PRIMARY_TEXT_COLOR
+
+  &__form
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    margin: 0 auto 2rem
+    background-color: Config.$INTERACTIVE_ELEMENT_COLOR
+    padding: 1.5rem
+    border-radius: Config.$INTERACTIVE_ELEMENT_RADIUS
+    max-width: 35%
+    width: 100%
+
+  &__label
+    font-weight: bold
+    color: Config.$SECONDARY_TEXT_COLOR
+
+  &__select
+    margin-top: 0.5rem
+    background-color: Config.$BACKGROUND_COLOR
+    color: Config.$PRIMARY_TEXT_COLOR
+    border: none
+    padding: 0.5rem
+    border-radius: Config.$INTERACTIVE_ELEMENT_RADIUS
+    @include Config.transition(all)
+
+    &:hover
+      background-color: Config.$INTERACTIVE_HOVER_EFFECT
+
+  &__input
+    padding: 0.5rem
+    background-color: Config.$BACKGROUND_COLOR
+    color: Config.$PRIMARY_TEXT_COLOR
+    border: none
+    border-radius: Config.$INTERACTIVE_ELEMENT_RADIUS
+    @include Config.transition(all)
+
+    &:hover
+      background-color: Config.$INTERACTIVE_HOVER_EFFECT
+
+  &__coordinates
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    gap: 1rem
+
+  &__button
+    padding: 0.5rem 1rem
+    background-color: Config.$BACKGROUND_COLOR
+    color: Config.$PRIMARY_TEXT_COLOR
+    border: none
+    border-radius: Config.$ROUNDED_ELEMENTS
+    cursor: pointer
+    font-weight: bold
+    @include Config.transition(all)
+
+    &:hover
+      background-color: Config.$INTERACTIVE_HOVER_EFFECT
+
+  &__loading
+    font-style: italic
+    color: Config.$SECONDARY_TEXT_COLOR
+
+  &__error
+    color: red
+    font-weight: bold
+    text-align: center
+
+.weather-display
+  background-color: Config.$INTERACTIVE_ELEMENT_COLOR
+  padding: 1.5rem
+  border-radius: Config.$INTERACTIVE_ELEMENT_RADIUS
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  max-width: 35%
+  width: 100%
+  margin: 0 auto
+
+  &__title
+    margin-bottom: 1rem
+    padding: 0.5rem
+    border-radius: Config.$ROUNDED_ELEMENTS
+    background-color: Config.$BACKGROUND_COLOR
+    color: Config.$PRIMARY_TEXT_COLOR
+
+  &__location
+    margin-bottom: 1rem
+    padding: 0.5rem
+    border-radius: Config.$ROUNDED_ELEMENTS
+    background-color: Config.$BACKGROUND_COLOR
+    color: Config.$SECONDARY_TEXT_COLOR
+
+  &__details
+    display: flex
+    align-items: center
+    padding: 2rem
+    border-radius: Config.$ROUNDED_ELEMENTS
+    background-color: Config.$BACKGROUND_COLOR
+    gap: 1rem
+    max-width: max-content
+
+  &__icon
+    flex-shrink: 0
+
+  &__info
+    flex-grow: 1
+
+  &__summary
+    font-size: 1.2rem
+    font-weight: bold
+    color: Config.$PRIMARY_TEXT_COLOR
+
+  &__list
+    list-style: none
+    padding: 0
+    margin: 0
+
+  &__item
+    margin-top: 0.25rem
+    color: Config.$SECONDARY_TEXT_COLOR
